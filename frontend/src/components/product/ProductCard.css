@@ -1,0 +1,192 @@
+.pxs-card {
+  position: relative;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  transition: transform var(--transition-base), border-color var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.pxs-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(243, 240, 233, 0.25);
+  box-shadow: var(--shadow-md);
+}
+
+.pxs-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Media Box */
+.pxs-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: var(--color-bg-elevated);
+  overflow: hidden;
+}
+
+.pxs-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pxs-card:hover .pxs-card__img {
+  transform: scale(1.05);
+}
+
+/* Badges & Wishlist */
+.pxs-card__badges {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 2;
+}
+
+.pxs-card__wishlist-btn {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  background-color: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.pxs-card__wishlist-btn:hover {
+  background-color: rgba(17, 17, 17, 0.95);
+  transform: scale(1.1);
+}
+
+/* Quick Add Size Bar */
+.pxs-card__quick-sizes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(17, 17, 17, 0.92);
+  backdrop-filter: blur(10px);
+  padding: var(--space-xs) var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  transform: translateY(100%);
+  transition: transform var(--transition-base);
+  z-index: 3;
+}
+
+.pxs-card:hover .pxs-card__quick-sizes,
+.pxs-card:focus-within .pxs-card__quick-sizes {
+  transform: translateY(0);
+}
+
+/* Always visible or easily accessible on touch devices */
+@media (hover: none) {
+  .pxs-card__quick-sizes {
+    transform: translateY(0);
+    background: rgba(17, 17, 17, 0.8);
+  }
+}
+
+.pxs-card__quick-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+}
+
+.pxs-card__size-pills {
+  display: flex;
+  gap: 4px;
+}
+
+.pxs-card__size-pill {
+  width: 26px;
+  height: 26px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.pxs-card__size-pill:hover:not(:disabled) {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverted);
+  border-color: var(--color-accent);
+}
+
+.pxs-card__size-pill.is-disabled {
+  opacity: 0.3;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+/* Information Container */
+.pxs-card__info {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pxs-card__fabric {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.pxs-card__title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-xs);
+  line-height: 1.25;
+}
+
+.pxs-card__pricing {
+  margin-top: auto;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+}
+
+.pxs-card__price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.pxs-card__mrp {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  text-decoration: line-through;
+}
+
+.pxs-card__fit {
+  margin-left: auto;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}

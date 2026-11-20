@@ -1,0 +1,32 @@
+.pxs-announcement {
+  background-color: var(--color-bg-surface);
+  border-bottom: 1px solid var(--color-border);
+  height: var(--announcement-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  overflow: hidden;
+  padding: 0 var(--space-md);
+  user-select: none;
+}
+
+.pxs-announcement__content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  white-space: nowrap;
+}
+
+.pxs-announcement__dot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: inline-block;
+}

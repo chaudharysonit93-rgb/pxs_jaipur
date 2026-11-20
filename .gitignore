@@ -20,6 +20,9 @@ out/
 backups/*.sql
 backups/*.sql.gz
 *.dump
+*.db
+*.db-shm
+*.db-wal
 
 # Logs & Debug Output
 npm-debug.log*

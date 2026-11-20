@@ -1,0 +1,74 @@
+:root {
+  /* ==========================================================================
+     PXS BRAND PALETTE (Dark Luxury Streetwear)
+     ========================================================================== */
+  --color-bg-base: #111111;         /* Deep luxury charcoal base */
+  --color-bg-surface: #181818;      /* Elevated surface for cards/drawers */
+  --color-bg-elevated: #222222;     /* Dropdown and modal surface */
+  --color-bg-highlight: #2a2a2a;    /* Hover and active states */
+
+  --color-text-primary: #F3F0E9;    /* Cream high-contrast text */
+  --color-text-secondary: #858585;  /* Muted grey for specs, SKU, metadata */
+  --color-text-inverted: #111111;   /* Text on electric lime */
+
+  --color-accent: #C7F36B;          /* Electric Lime (5% restrained usage) */
+  --color-accent-hover: #b4e054;    /* Slightly darker lime for hover */
+  --color-accent-subtle: rgba(199, 243, 107, 0.15);
+
+  --color-border: rgba(243, 240, 233, 0.12);
+  --color-border-subtle: rgba(243, 240, 233, 0.06);
+  --color-border-accent: rgba(199, 243, 107, 0.4);
+
+  --color-danger: #ff4d4d;
+  --color-success: #C7F36B;
+
+  /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Fluid typography scaling */
+  --text-hero: clamp(2.5rem, 6.5vw, 5.25rem);
+  --text-h1: clamp(2rem, 4.5vw, 3.5rem);
+  --text-h2: clamp(1.4rem, 3vw, 2.25rem);
+  --text-h3: clamp(1.1rem, 2vw, 1.4rem);
+  --text-body: clamp(0.9rem, 1vw, 1rem);
+  --text-sm: 0.825rem;
+  --text-xs: 0.725rem;
+
+  /* ==========================================================================
+     SPACING (8pt Grid)
+     ========================================================================== */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* ==========================================================================
+     BORDERS & ELEVATION
+     ========================================================================== */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-pill: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.8);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --header-height: 72px;
+  --announcement-height: 36px;
+  --container-max: 1360px;
+}
